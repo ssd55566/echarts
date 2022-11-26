@@ -1,0 +1,574 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* 修改默认样式 */
+h4,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 布局˙整体 .viewport */
+.viewport {
+  min-width: 1080px;
+  max-width: 1920px;
+  min-height: 11rem;
+  margin: 0 auto;
+  padding: 1rem .25rem 0;
+  background: url(../images/logo.png) no-repeat;
+  background-size: contain;
+  display: flex;
+}
+
+.viewport>.culom {
+  flex: 3;
+  /* background-color: aqua; */
+}
+
+.viewport>.culom:nth-of-type(2) {
+  flex: 4;
+  /* background-color: burlywood; */
+  margin: .675rem .1875rem 0;
+}
+
+/* 公共 */
+.public {
+  border: 1px solid transparent;
+  border-image-source: url(../images/border.png);
+  border-width: 0.6375rem 0.475rem 0.25rem 1.65rem;
+  border-image-slice: 51 38 20 132;
+  border-bottom: - 0.25rem;
+  position: relative;
+  margin-bottom: .25rem;
+}
+
+.inner {
+  position: absolute;
+  top: -0.6375rem;
+  right: -0.475rem;
+  bottom: -0.25rem;
+  left: -1.65rem;
+  padding: .225rem .325rem;
+}
+
+.public h3 {
+  font-size: .25rem;
+  color: wheat;
+  font-weight: 400;
+}
+
+/* 概览 */
+.overview {
+  height: 1.25rem;
+  box-sizing: border-box;
+}
+
+.overview ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview h4 {
+  font-size: .3rem;
+  color: white;
+}
+
+.overview ul li {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.overview ul li span {
+  margin-top: .1rem;
+  font-size: .175rem;
+  color: rgb(23, 66, 182);
+}
+
+/* 竖杠 */
+.line {
+  width: .05rem;
+  height: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: .025rem;
+}
+
+/* 监控 */
+.monitoring {
+  height: 4.5rem;
+
+}
+
+.monitoring>.inner {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+}
+
+/* 监控导航部分 */
+.monitoring .tabs {
+  font-size: 0.225rem;
+
+  height: 0.375rem;
+  display: flex;
+  align-items: center;
+}
+
+.tabs a {
+  font-size: .35rem;
+  color: #1950c4;
+}
+
+.tabs .active {
+
+  color: white;
+}
+
+/* 两个a标签中间的 竖线 */
+.tabs>.line {
+  display: inline-block;
+  width: 3px;
+  height: 30px;
+  background-color: #6feeef;
+  margin: 0 0.25rem;
+  border-radius: 0;
+}
+
+.content {
+  margin-top: 0.125rem;
+  box-sizing: border-box;
+  flex: 1;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.monitoring .content>.top {
+  height: 0.5375rem;
+  color: #68d8fe;
+  line-height: 0.5375rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 0.25rem;
+}
+
+.content .row {
+  display: flex;
+
+  flex-wrap: nowrap;
+  font-size: 0.2rem;
+  line-height: 0.435rem;
+  color: #61a8ff;
+}
+
+.content .col:nth-of-type(1) {
+  width: 1.5rem;
+}
+
+.content .col:nth-of-type(2) {
+  width: 3.5rem;
+
+}
+
+.content .col:nth-of-type(3) {
+  width: 2rem;
+}
+
+/* 滚动动画 */
+.message {
+  flex: 1;
+  overflow: hidden;
+}
+
+.message>.messageScrool {
+  animation: rollPlay linear 7s infinite;
+}
+
+@keyframes rollPlay {
+  0% {}
+
+  100% {
+    transform: translateY(-29%);
+  }
+}
+
+/* 点位 */
+.ghi {
+  height: 2.6rem;
+
+}
+
+.ghi .chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .125rem;
+}
+
+.ghi .pie {
+  width: 3.9rem;
+  height: 2.4rem;
+
+}
+
+.ghi .ghi-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.1rem;
+  padding: .45rem .3rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+}
+
+.ghi h4 {
+  font-size: .25rem;
+  color: white;
+}
+
+.ghi span {
+  margin-top: .1rem;
+  display: block;
+  color: #f8ab05;
+  font-size: 0.175rem;
+}
+
+/* 地图 */
+
+.map {
+  height: 6.2rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.map h3 {
+  font-size: .2rem;
+  line-height: .1rem;
+  padding: .2rem 0;
+  margin: 0;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.map .bg {
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  margin-right: 0.0725rem;
+  background-color: white;
+  background: url(../images/shebei.png) no-repeat;
+  background-size: contain;
+}
+
+.map .nav {
+  flex: 1;
+  background-color: rgb(203, 189, 189, .1);
+}
+
+.map .maps {
+  width: 100%;
+  height: 100%;
+}
+
+/* 全国 用户统计 */
+.columnar {
+  height: 2.6rem;
+
+}
+
+.columnar .chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .125rem;
+}
+
+.columnar .columnar-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.1rem;
+  padding: .45rem .3rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+}
+
+.columnar h4 {
+  font-size: .25rem;
+  color: white;
+
+}
+
+.columnar span {
+  font-size: 0.175rem;
+  margin-top: .1rem;
+  display: block;
+  color: #f8ab05;
+}
+
+.columnar .columnar-1 {
+  width: 5.9rem;
+  height: 2.7rem;
+
+}
+
+/* 订单 */
+.indent {
+  height: 1rem;
+}
+
+.indent .right {
+  display: flex;
+}
+
+.indent .right a {
+  display: block;
+  height: .25rem;
+  line-height: .25rem;
+  color: #3168dd;
+  padding: 0 .25rem;
+  font-size: .25rem;
+  border-right: 1px solid aqua;
+}
+
+.indent .text {
+  display: flex;
+  margin-top: .25rem;
+}
+
+.orderDataHidden {
+  display: none !important;
+}
+
+.indent .item {
+  width: 50%;
+}
+
+
+
+.indent h4 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: .125rem;
+}
+
+.indent span {
+  font-size: .12rem;
+  display: block;
+  color: #3985c8;
+}
+
+
+/* 销售额 */
+.saleroom {
+  height: 1.8rem;
+}
+
+.saleroom .saleroom-1 {
+  display: flex;
+  line-height: 1;
+}
+
+.saleroom h3 {
+  height: .25rem;
+  padding-right: .35rem;
+  border-right: 1px solid rgb(44, 108, 187);
+}
+
+.saleroom a {
+  font-size: .19rem;
+  padding: 0 .05rem;
+  margin: -0.0375rem 0 0 0.4625rem;
+  border-radius: .0625rem;
+  color: #3985c8;
+}
+
+.saleroom .inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.saleroom .chart {
+  flex: 1;
+  padding-top: .125rem;
+  position: relative;
+}
+
+.saleroom .saleroom-2 {
+  position: absolute;
+  left: 0.525rem;
+  top: 0.225rem;
+  color: #4996f5;
+  font-size: 0.195rem;
+}
+
+.saleroom .chart-1 {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* 渠道 季度区块 */
+.nav {
+  display: flex;
+}
+
+.channel,
+.quarter {
+  flex: 1;
+  height: 1.7rem;
+}
+
+.channel {
+  margin-right: 0.15rem;
+}
+
+.channel .data {
+  overflow: hidden;
+}
+
+.channel .text .channel-1 {
+  height: 1.9rem;
+  width: 100%;
+  /* background-color: pink; */
+}
+
+.channel h4 {
+  color: #fff;
+  font-size: 0.4rem;
+  margin-bottom: 0.0625rem;
+}
+
+.channel small {
+  font-size: 50%;
+}
+
+.channel span {
+  display: block;
+  color: #4c9bfd;
+  font-size: 0.175rem;
+}
+
+/* 季度区块 */
+.quarter .inner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -0.075rem;
+}
+
+.quarter .chart {
+  flex: 1;
+  /* padding-top: 0.225rem; */
+}
+
+.quarter .box {
+  position: relative;
+}
+
+.quarter .box-2 {
+  transform: translate(-58%, -39%);
+  color: #fff;
+  font-size: 0.375rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.quarter .box-2 small {
+  font-size: 50%;
+}
+
+.quarter .box-1 {
+  height: 1.05rem;
+}
+
+.quarter .text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quarter .item {
+  width: 50%;
+}
+
+.quarter h4 {
+  color: #fff;
+  font-size: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+
+.quarter span {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #4cfde2;
+  font-size: 0.175rem;
+}
+
+/* 水滴 */
+.wirter {
+  height: 2.6rem;
+}
+
+.wirter .chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .125rem;
+}
+
+.wirter span {
+  font-size: 0.175rem;
+  margin-top: .01rem;
+  display: block;
+  color: #f8ab05;
+}
+
+.wirter h4 {
+  font-size: .25rem;
+  color: white;
+
+}
+
+.wirter .wirter-1 {
+  width: 5.9rem;
+  height: 2.7rem;
+
+}
+
+.wirter .wirter-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.1rem;
+  padding: .45rem .3rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+}
